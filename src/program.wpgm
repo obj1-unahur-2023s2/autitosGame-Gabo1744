@@ -1,0 +1,42 @@
+import wollok.game.*
+import autos.*
+
+program juego {
+	//configurar el tablero
+	game.height(12)
+	game.width(12)
+	game.title("El mejor juego del mundo")
+	game.ground("paredLadrillos3.jpg")
+	
+	//agregar el kwid
+	
+	/*kwid.position(game.at(
+		0.randomUpTo(game.width()).truncate(0),
+		0.randomUpTo(game.height()).truncate(0)
+	))
+	game.addVisual(kwid)*/
+	
+	//agregar el corsa al tablero
+	
+	corsa.position(game.at(
+		0.randomUpTo(game.width()).truncate(0),
+		0.randomUpTo(game.height()).truncate(0)
+	))	game.addVisual(corsa)
+	
+	//
+	keyboard.up().onPressDo({
+		corsa.arriba()
+	})
+	keyboard.down().onPressDo({
+		corsa.abajo()
+	})
+	keyboard.left().onPressDo({
+		corsa.izquierda()
+	})
+	keyboard.right().onPressDo({
+		corsa.derecha()
+	})
+	
+	game.start()
+	
+}
