@@ -3,5 +3,5 @@ object michael {
 	method adios(){
 		nose = "adios"
 	}
-	method aves()=12
+	method aves()=0
 }
